@@ -35,7 +35,13 @@ echo "<p><mark>{$usuario-> nome}</mark><p>" ; //interpolação
 
 <hr>
 
+<?php
+//Convertendo um objeto em um array associativo
+$arrayUsuario = (array) $usuario;
+?>
 
+<h3>Analisando o array gerado a partir de um objeto</h3>
+<pre><?=var_dump($arrayUsuario)?></pre>
 
 
 </body>
