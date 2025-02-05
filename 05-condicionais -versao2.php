@@ -30,14 +30,13 @@
     <?php
     $numero = 5;
     if ($numero > 1) {
-        echo "<p>$numero é maior que 1 </p>";
-    }
-
-    //Sintaxe omitindo as chaves
-    if ($numero > 1) echo "<p>$numero é maior que 1 </p>"
     ?>
-    <hr>
-    <h2>Composta usando <code>if/else</code></h2>
+        <p><?=$numero?> é maior que 1 </p>
+    <?php
+    }
+    ?>
+       <hr>
+       <h2>Composta usando <code>if/else</code></h2>
     <?php
     $produto = "Ultrabook Asus";
     $qtdEmEstoque = 10; //o que temos
@@ -60,23 +59,21 @@
     ?>
 
     <h2>Encadeada usando <code>if/elseif/else</code></h2>
- <!-- Verificar a idade de uma pessoa e determinar se ela é criança,adolescente, adulta ou idosa. -->
+    <!-- Verificar a idade de uma pessoa e determinar se ela é criança,adolescente, adulta ou idosa. -->
 
- <?php
- $idade = 65;
- if ($idade <= 12){
-   echo "<p>Criança 👼</p>";
- }elseif ($idade <= 17) {
-    echo !"<p>Adolescente 😒";
- }elseif($idade <= 59){
-    echo "<p>Adulto 🤦‍♀️</p>";
- }
- else{
-    echo "<p> Idoso 👴";
- };
+    <?php
+    $idade = 65;
+    if ($idade <= 12) {
+        echo "<p>Criança 👼</p>";
+    } elseif ($idade <= 17) {
+        echo !"<p>Adolescente 😒";
+    } elseif ($idade <= 59) {
+        echo "<p>Adulto 🤦‍♀️</p>";
+    } else {
+        echo "<p> Idoso 👴";
+    };
 
-
- ?>
+    ?>
 
 
 
