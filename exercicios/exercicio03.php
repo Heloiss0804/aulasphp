@@ -34,6 +34,7 @@
     <p>O valor da compra feita é <?=$valor_compra?> e o desconto obtido foi <?=$valor_final_formatado?></p>
 
 
+
 </body>
 
 </html>
