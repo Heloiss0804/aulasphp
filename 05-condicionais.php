@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP - Condicionais</title>
+    <style>
+        .compras{
+          color: red;
+        }
+        .urgente{
+            color: red;
+            background-color: yellow;
+        }
+        .normal{
+            color: darkgreen;
+        }
+    </style>
 </head>
 <body>
     <h1>Estruturas condicionais</h1>
@@ -32,14 +44,25 @@
     echo "<h4>Quantidade em estoque: $qtdEmEstoque</h4>";
 
     if ($qtdEmEstoque < $qtdCritica) {
-        echo "<p>É necessário comprar!</p>";
-    } else {
-        echo "<p>Estoque normal </p>";
+        echo "<p class=\"compras\">É necessário comprar!</p>";
+
+        //Condicional Aninanda
+     
+    if($qtdEmEstoque === 0){
+        echo "<p class=\"urgente\"><strong>🤟URGENTE🤟 </strong></p>";
+
+    }
+
+    }
+    
+    
+    else {
+        echo "<p class=\"normal\">Estoque normal </p>";
     }
     ?>
 
 
-    <h2>Encadeada</h2>
+    <h2 >Encadeada</h2>
 
 
 
