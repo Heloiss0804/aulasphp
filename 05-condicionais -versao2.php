@@ -48,9 +48,9 @@
 
     <?php
     if ($qtdEmEstoque < $qtdCritica) {
-     ?>
+    ?>
         <p class="compras">É necessário comprar!</p>
- 
+
         <?php
         //Condicional Aninanda
         if ($qtdEmEstoque === 0) {
@@ -63,9 +63,11 @@
     } else {
     ?>
         <p class="normal">Estoque normal!</p>
-       <?php
+    <?php
     }
     ?>
+
+
     <hr>
     <h2>Encadeada usando <code>if/elseif/else</code></h2>
     <!-- Verificar a idade de uma pessoa e determinar se ela é criança,adolescente, adulta ou idosa. -->
@@ -73,16 +75,16 @@
     <?php
     $idade = 65;
     if ($idade <= 12) {
-        echo "<p>Criança 👼</p>";
+        $texto = "Criança 👼";
     } elseif ($idade <= 17) {
-        echo !"<p>Adolescente 😒";
+        $texto = "Adolescente 😒";
     } elseif ($idade <= 59) {
-        echo "<p>Adulto 🤦‍♀️</p>";
+        $texto = "Adulto 🤦‍♀️</p>";
     } else {
-        echo "<p> Idoso 👴";
+        $texto = "Idoso 👴";
     };
-
     ?>
+    <p><?= $texto ?></p>
 
 
 
