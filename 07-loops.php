@@ -21,10 +21,26 @@ while ($i <= 3){
 }
  ?>   
 
-
+<hr>
 
     <h2>DO/WHILE (parecido com REPITA) </h2>
     <p>Repete <b>pelo menos uma vez</b>as ações e, a caso a condição continue verdadeira, segue fazendo outros ciclos de repetição até a condição se tornar falsa.</p>
+
+<?php
+$j =  1;
+do {
+
+?> 
+   <div>
+    <h3>Título...</h3>
+    <p>Texto Qualquer...</p>
+   </div>
+<?php
+$j++;
+} while ($j <= 3);
+?>   
+
+<hr>
 
     <h2>FOR (PARA)</h2>
     <p>Executa ações por uma <b>quantidade determinada</b>de vezes.</p>
