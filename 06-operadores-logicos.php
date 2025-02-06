@@ -39,8 +39,23 @@ if ($clientesVIP || $temCupom){
 
 }
 ?>    
+<hr>
 
     <h2>! (NÃO/NOT)</h2>
+    <p><i>É uma inversão de lógica: VERDADEIRA vira <b>FALSO</b>, FALSO vira <b>VERDADEIRO</b></i></p>
+<?php
+//Se o usuário NÃO ESTIVER logado, exibir o lunk/botão de LOGIN.
+$usuarioLogado = false;
+
+if (!$usuarioLogado) {
+  echo "<a href=\"login.php\">Login</a>";
+  
+}else {
+    echo "<span>Bem-Vindo ao sistema!</span>";
+
+}
+?>    
+
 
     
 </body>
