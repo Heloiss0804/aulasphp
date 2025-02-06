@@ -48,7 +48,7 @@ $j++;
 <?php
 for($i = 1; $i <= 10; $i++){
 ?>
-    <p><code>i</code>vale: <b> </b></p>
+    <p><code> i </code>vale: <b><?=$i?> </b></p>
 <?php
 }
 ?>
@@ -56,6 +56,7 @@ for($i = 1; $i <= 10; $i++){
     <hr>
     <h2>Mini-exercício</h2>
     <p>Crie um array contendo os 12 meses do ano e usando um dos loops que vimos, mostre os nomes dos mess em uma lista ordenada HTML</p>
+    <hr>
 
     <ol>
         <?php
