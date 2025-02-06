@@ -59,16 +59,21 @@ for($i = 1; $i <= 10; $i++){
 
     <ol>
         <?php
-            
+           
             $meses = [
                 "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
                 "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
             ];
 
             
+            $itensLista = '';
+
+           
             for ($i = 0; $i < count($meses); $i++) {
-                echo "<li>" . $meses[$i] . "</li>";
+                $itensLista .= "<li>" . $meses[$i] . "</li>";
             }
+
+            echo $itensLista;
         ?>
     </ol>
 
