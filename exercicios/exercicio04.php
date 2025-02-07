@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tabela de Linguagens</title>
+<title>Exercicio - 04</title>
 <style>
     
        table {
@@ -34,6 +34,12 @@
        tr:hover {
            background-color: #ddd;
        }
+
+       h1{
+        text-align: center;
+        justify-content: center;
+       
+       }
 </style>
 </head>
 <body>
@@ -46,6 +52,7 @@
 </tr>
 </thead>
 <tbody>
+  <h1>Tabela de linguagens e descricao</h1>
 <?php
 
 $linguagens = [
@@ -62,12 +69,16 @@ $linguagens = [
            $id = 1;
           
            foreach ($linguagens as $linguagem => $descricao) {
-               echo "<tr>";
-               echo "<td>$id</td>";
-               echo "<td>$linguagem</td>";
-               echo "<td>$descricao</td>";
-               echo "</tr>";
-               $id++; 
+            ?>
+               <tr>
+              <td><?=$id?></td>
+              <td><?=$linguagem?></td>
+              <td><?=$descricao?></td>
+              </tr>
+              
+           
+                <?php
+                  $id++;
            }
            ?>
 </tbody>
