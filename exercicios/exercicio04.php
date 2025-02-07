@@ -56,29 +56,53 @@
 <?php
 
 $linguagens = [
-   "HTML" => "Estruturação",
-   "CSS" => "Estilos",
-   "JS" => "Comportamentos",
-   "PHP" => "Back-End",
-   "SQL" => "Manipulação de dados",
-   "Java" => "Softwares"
+  [
+      "id" => 1,
+      "nome" => "HTML",
+      "descricao" => "Estruturação"
+  ],
+  [
+      "id" => 2,
+      "nome" => "CSS",
+      "descricao" => "Estilos"
+  ],
+  [
+      "id" => 3,
+      "nome" => "JS",
+      "descricao" => "Comportamentos"
+  ],
+  [
+      "id" => 4,
+      "nome" => "PHP",
+      "descricao" => "Back-End"
+  ],
+  [
+      "id" => 5,
+      "nome" => "SQL",
+      "descricao" => "Manipulação de dados"
+  ],
+  [
+      "id" => 6,
+      "nome" => "Java",
+      "descricao" => "Softwares"
+  ],
 ];
 ?>
 <?php
           
-           $id = 1;
+           
           
-           foreach ($linguagens as $linguagem => $descricao) {
+           foreach ($linguagens as  $linguagem) {
             ?>
                <tr>
-              <td><?=$id?></td>
-              <td><?=$linguagem?></td>
-              <td><?=$descricao?></td>
+              <td><?=$linguagem["id"]?></td>
+              <td><?=$linguagem["nome"]?></td>
+              <td><?=$linguagem["descricao"]?></td>
               </tr>
               
            
                 <?php
-                  $id++;
+                 
            }
            ?>
 </tbody>
