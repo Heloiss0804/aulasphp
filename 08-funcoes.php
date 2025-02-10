@@ -11,6 +11,22 @@
 <body>
     <div class="container">
         <h1>Trabalhando com funções</h1>
+
+        <h2>Função com procedimento (ou sub-rotina)</h2>
+        <p><i>Procedimentos <b>não retornam </b>nada.</i></p>
+
+<?php
+function exibirDadosDoAutor (){
+    echo "<h3>Fulano de Tal</h3>";
+    echo "<p><time>".date("d/m/y")."</time></p>";
+
+}
+
+?>
+
+   <h3>Chamada de procedimento</h3>
+   <?=exibirDadosDoAutor()?>
+
     </div>
 
 
