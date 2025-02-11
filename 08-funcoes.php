@@ -71,14 +71,27 @@
             <p class="alert alert-success">O resultado 3 é maior que 2000 </p>
         <?php } else { ?>
             <p class="alert alert-danger">Resultado 3 não é maior que 2000</p>
-            <?php } ?>
+        <?php } ?>
 
-            <!-- Usando uma função como parte de uma condição: PRIMEIRO, a função é chamada (e ai ela calcula e retorna), DEPOIS o resultado que ela retornou pe comparado com a condição -->
-        <?php if (somar(10, 50) < 50){  ?>   
+        <!-- Usando uma função como parte de uma condição: PRIMEIRO, a função é chamada (e ai ela calcula e retorna), DEPOIS o resultado que ela retornou pe comparado com a condição -->
+        <?php if (somar(10, 50) < 50) {  ?>
             <p>João Pedro reprovado</p>
 
         <?php } ?>
 
+
+
+        <h3>Função com parâmetros opcionais</h3>
+
+        <?php
+        // Parâmetros opcionais possuem algum tipo de atribuição com um valor alternativo para o caso de não serem passados na chamada da função.Obs.:sempre devem estar por último na relação de parâmetros da função.
+        function exibirSaudacao($mensagem, $pessoa = "")
+        {
+            return "Olá, $mensagem $pessoa";
+        }
+        ?>
+        <p>Mensagem 1: <?=exibirSaudacao("bom dia", "João Pedro")?></p>
+        <p>Mensagem 2: <?=exibirSaudacao("boa tarde", "João Pedro")?></p>
     </div>
 
 
