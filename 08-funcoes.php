@@ -123,6 +123,20 @@
         <!-- O código abaixo (sem comentários) gera um erro relacionado a indução de tipos (foi dado uma string e era esperado um número inteiro) -->
         <!-- <p>Teste de valor /parâmetro errado:  <//?=verificarNegativo("Paulo Henrique")?> </p> -->
 
+        <hr>
+
+        <h2>Função anônima (ou lambda)</h2>
+        <?php
+        $formatarPreco = function(float $valor):string{
+            $precoFormatado = "R$" .number_format($valor, 2, ",", ",");
+            return $precoFormatado;
+    }
+        ?>
+        <p><?=$formatarPreco(1000)?></p>
+        <p><?=$formatarPreco(1500.88)?></p>
+        <p><?=$formatarPreco(10500.2598)?></p>
+        <p><?=$formatarPreco(-1098)?></p>
+
     </div>
 
 
