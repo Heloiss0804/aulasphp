@@ -15,66 +15,70 @@
         <h2>Função com procedimento (ou sub-rotina)</h2>
         <p><i>Procedimentos <b>não retornam </b>nada.</i></p>
 
-<?php
-function exibirDadosDoAutor (){
-    echo "<h3>Fulano de Tal</h3>";
-    echo "<p><time>".date("d/m/y")."</time></p>";
+        <?php
+        function exibirDadosDoAutor()
+        {
+            echo "<h3>Fulano de Tal</h3>";
+            echo "<p><time>" . date("d/m/y") . "</time></p>";
+        }
 
-}
+        ?>
 
-?>
-
-   <h3>Chamada de procedimento</h3>
-   <?php
-   $valor = 500;
-   if($valor > 1000){
-    exibirDadosDoAutor();
-  
-   }
-   ?>
+        <h3>Chamada de procedimento</h3>
+        <?php
+        $valor = 500;
+        if ($valor > 1000) {
+            exibirDadosDoAutor();
+        }
+        ?>
 
 
-   <h3>Outras chamadas</h3>
-   <div><?=exibirDadosDoAutor()?></div>
-   <ul>
-    <li><?=exibirDadosDoAutor()?></li>
-    <li><b><?=exibirDadosDoAutor()?></b></li>
-   </ul>
+        <h3>Outras chamadas</h3>
+        <div><?= exibirDadosDoAutor() ?></div>
+        <ul>
+            <li><?= exibirDadosDoAutor() ?></li>
+            <li><b><?= exibirDadosDoAutor() ?></b></li>
+        </ul>
 
-   <hr>
+        <hr>
 
-   <h2>Função com parâmetros (ou argumentos)</h2>
+        <h2>Função com parâmetros (ou argumentos)</h2>
 
-<?php
-function somar($valor1, $valor2){
-    //VAriável de escopo LOCAL:
-    //Este tipo de variável existe SOMENTE DENTRO da função em que foi declarada.
-   //$total = $valor1 + $valor2;
+        <?php
+        function somar($valor1, $valor2)
+        {
+            //VAriável de escopo LOCAL:
+            //Este tipo de variável existe SOMENTE DENTRO da função em que foi declarada.
+            //$total = $valor1 + $valor2;
 
-   //Retornamos o resultado, ou seja, "mandamos para fora" da função o resultado do que ela fez.
-   //return $total
+            //Retornamos o resultado, ou seja, "mandamos para fora" da função o resultado do que ela fez.
+            //return $total
 
- //Podemos também aplicar o return direto na expressão (sem uso de variável local)
-   return $valor1 + $valor2;
+            //Podemos também aplicar o return direto na expressão (sem uso de variável local)
+            return $valor1 + $valor2;
+        }
+        ?>
+        <h3>Chamadas/retornos da função somar</h3>
+        <p>Resultado 1: <?= somar(10, 5) ?></p>
+        <p>Resultado 2: <?= somar(23, 107) ?></p>
 
-}
-?>
-    <h3>Chamadas/retornos da função somar</h3>
-    <p>Resultado 1: <?=somar(10, 5)?></p>
-    <p>Resultado 2: <?=somar(23, 107)?></p>
+        <?php
+        //Chamando a função e GUARDANDO  o resultado numa variável GLOBAL
+        $resultado3 = somar(1250, 788.85);
+        ?>
+        <p>Resultado 3: <?= $resultado3 ?></p>
+        <?php if ($resultado3 > 2000) { ?>
+            <p class="alert alert-success">O resultado 3 é maior que 2000 </p>
+        <?php } else { ?>
+            <p class="alert alert-danger">Resultado 3 não é maior que 2000</p>
+            <?php } ?>
 
- <?php
- //Chamando a função e GUARDANDO  o resultado numa variável GLOBAL
- $resultado3 = somar(1250, 788.85);
-  ?>   
-       <p>Resultado 3: <?=$resultado3?></p> 
- <?php if($resultado3 > 2000){ ?>
-     <p class="alert alert-success">O resultado 3 é maior que 2000 </p>        
- <?php } else { ?> 
-    <p class="alert alert-danger">Resultado 3 não é maior que 2000</p>
+            <!-- Usando uma função como parte de uma condição: PRIMEIRO, a função é chamada (e ai ela calcula e retorna), DEPOIS o resultado que ela retornou pe comparado com a condição -->
+        <?php if (somar(10, 50) < 50){  ?>   
+            <p>João Pedro reprovado</p>
 
- <?php } ?>      
-    
+        <?php } ?>
+
     </div>
 
 
