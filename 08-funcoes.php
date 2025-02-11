@@ -104,6 +104,8 @@
             }else {
                 return "não é negativo";
             }
+
+            return $valor < 0 ? "é  negativo ": "nao é negativo";
         }
 
         // Tipos comuns para uso com indução 
