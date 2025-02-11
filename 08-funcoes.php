@@ -103,8 +103,8 @@
             if($valor < 0) return "é negativo";
             else {
                 // Early Reurn (retorno antecipado)
-                return "não é negativo";
-            }
+               return "não é negativo";                 
+                 }
 
             //Ao usar Early Return, podemos em algumas situações evitar a necessidade do else (condicional composta).Neste exemplo, se a condição for TRUE o primeiro return é executado.Se não for, na sequência sera feito o segundo return.
             
@@ -121,7 +121,7 @@
         <p>Número 10 <?=verificarNegativo(10)?></p>
         <p>Número -10 <span class="badge text-bg-danger"> <?=verificarNegativo(-10)?></span></p>
         <!-- O código abaixo (sem comentários) gera um erro relacionado a indução de tipos (foi dado uma string e era esperado um número inteiro) -->
-        <!-- <p>Teste de valor /parâmetro errado: <?=verificarNegativo("Paulo Henrique")?> </p> -->
+        <!-- <p>Teste de valor /parâmetro errado:  <//?=verificarNegativo("Paulo Henrique")?> </p> -->
 
     </div>
 
