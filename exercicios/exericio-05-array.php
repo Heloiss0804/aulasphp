@@ -9,6 +9,18 @@
 <body>
  <?php
 
+function calcularMedia($valor1,$valor2,$valor3){
+   return ($valor1 + $valor2 + $valor3)/3; 
+}
+
+function verificar_situacao(float $valorMedia):string {
+    if($valorMedia >=7){
+        return "aprovado";
+    }else {
+        return "reporovado";
+
+    }
+}
  // Lista de alunos com suas notas
 $alunos = [
     [
@@ -46,10 +58,13 @@ $alunos = [
 
  <?php
  foreach ($alunos as $aluno){
+    $media = calcularMedia($aluno["nota1"],$aluno["nota2"], $aluno["nota3"]);
+    $situacao = verificar_situacao($media)
     ?>
-  <p>Aluno(a) <?=$aluno["nome"] ?> teve as notas <?=$aluno["nota"]?></p>  
+     
+  <p>Aluno(a) <?=$aluno["nome"] ?> teve as notas <?=$situacao?></p>  
   <hr>
-</php
+<?php
  }
  ?>
 
