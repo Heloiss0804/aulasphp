@@ -83,30 +83,43 @@
             <li>Idade: <?= $idade ?> anos</li>
         </ul>
         <hr>
-            
+
         <h3><code>array_sum()</code></h3>
         <p>Somar valores de um array numérico</p>
 
         <?php
-        $valores = [10,20,50,1000,500];
+        $valores = [10, 20, 50, 1000, 500];
         $total = array_sum($valores);
         ?>
-       
-       <p>Soma dos valores do array <b><?=$total?></b></p>
-       <hr>
 
-       <h3><code>array_unique()</code></h3>
-       <p>Retorna um novo array com dados <b>únicos</b></p>
+        <p>Soma dos valores do array <b><?= $total ?></b></p>
+        <hr>
 
-       <?php
-       $produtos = ["TV","Notebook", "TV", "Geladeira", "Monitor", "Monitor", "Mouse", "Notebook", "Webcam"];
+        <h3><code>array_unique()</code></h3>
+        <p>Retorna um novo array com dados <b>únicos</b></p>
 
-       $produtosUnicos = array_unique($produtos);
+        <?php
+        $produtos = ["TV", "Notebook", "TV", "Geladeira", "Monitor", "Monitor", "Mouse", "Notebook", "Webcam"];
 
-       ?>
-        
-        <pre><?=var_dump($produtos)?></pre>
-        <pre><?=var_dump($produtosUnicos)?></pre>
+        $produtosUnicos = array_unique($produtos);
+
+        ?>
+
+        <pre><?= var_dump($produtos) ?></pre>
+        <pre><?= var_dump($produtosUnicos) ?></pre>
+        <hr>
+
+        <h2>Númericas</h2>
+        <h3><code>min(), max(), round()</code></h3>
+
+        <?php
+        //Vamos usar mesmo array de valores criado mais acima
+        $valorQualquer = 1259.75;
+        ?>
+
+        <p>Menor valor: <?=min($valores)?></p>
+        <p>Maior valor: <?=max($valores)?></p>
+        <p>Arredondamento: <?=round($valorQualquer)?></p>
 
 
 
