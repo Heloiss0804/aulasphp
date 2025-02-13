@@ -15,15 +15,29 @@
 
         <h2>Strings</h2>
         <h3><code>trim()</code></h3>
-<?php
-$texto = "   Paulo Henrique está me devendo paçocas    ";
-$textoSemEspaco = trim($texto);
-?>
-<pre><?=var_dump($texto)?></pre>
-<pre><?=var_dump($textoSemEspaco)?></pre>
-   <hr>
+        <p>Remove espaços antes e depois de strings</p>
+        <?php
+        $texto = "   Paulo Henrique está me devendo paçocas    ";
+        $textoSemEspaco = trim($texto);
+        ?>
+        <pre><?= var_dump($texto) ?></pre>
+        <pre><?= var_dump($textoSemEspaco) ?></pre>
+        <hr>
 
-   <h3></h3>
+        <h3><code>str_replace()</code></h3>
+        <p>Permite substituir partes de uma string.</p>
+
+        <?php
+        $fraseFeia = "Esse Paulo é um bobão e xarope";
+        $fraseBunitinha = str_replace(
+            ["bobão", "xarope"],
+            ["🤬", "🚨"],
+            $fraseFeia
+        );
+        ?>
+
+        <p><?= $fraseFeia ?></p>
+        <p><?= $fraseBunitinha ?></p>
 
 
     </div>
