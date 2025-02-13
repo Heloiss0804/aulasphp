@@ -50,6 +50,17 @@
         ?>
         <pre><?=var_dump($textosLinguagens)?></pre>
         <pre><?=var_dump($arrayLinguagens)?></pre>
+<hr>
+
+        <h3><code>implode()</code></h3>
+        <p>Transforma array em string</p>
+
+        <?php
+        $arrayBandas = ["Rush","Slayer", "Dio"];
+        $textoBandas = implode(" - ",$arrayBandas);
+        ?>
+        <pre><?=var_dump($arrayBandas)?></pre>
+        <pre><?=var_dump($textoBandas)?></pre>
 
 
     </div>
