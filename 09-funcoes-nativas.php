@@ -177,7 +177,25 @@ $emailCorreto = "thiago@provedor.com.br";
         <?=$senhaCodifocadaComSHA256?> - (<?=strlen($senhaCodifocadaComSHA256)?>)</p>SENHA (SHA-256)
         <hr>
 
+        <p class="alert alert-success"><i>Método/Algoritmo ideal atualmente</i></p>
 
+        <?php
+       $SenhaCodificada = password_hash($senhaTextoPuro, PASSWORD_DEFAULT);
+        ?>
+        <p>Senha codificada com <code>password_hash()</code>:
+            <?=$SenhaCodificada?> (<?=strlen($SenhaCodificada)?>)
+        </p>
+
+        <h4>Comparando a senha informada com a senha codificada</h4>
+
+      <?php
+      $senhaDigitada = "123senac";
+      if(password_verify($senhaDigitada,$SenhaCodificada)){
+        echo "Senha correta,pode entrar...";
+      }else {
+        echo "Senha errada!Some daqui disgraça";
+      }
+      ?>
 
 
     </div>
