@@ -145,7 +145,38 @@ $emailCorreto = "thiago@provedor.com.br";
        $ataqueSanitizado = filter_var($ataqueDeRaqui,FILTER_SANITIZE_SPECIAL_CHARS);
        echo $ataqueSanitizado
         ?>
+
+    <h2>Segurança (criptografia de dados)</h2>
+    <h3>Algoritmos e Recursos </h3>
+    <ul>
+        <li>MD5</li>
+        <li>SHA-1</li>
+        <li>SHA-256</li>
+        <li><b>password_hash e password_verify()</b> </li>
+    </ul>
+
+    <?php
+    //Plain Text
+    $senhaTextoPuro = "123senac";
+
     
+    $senhaCodifocadaComMDS5 = md5($senhaTextoPuro);//MD5
+    $senhaCodifocadaComSHA1 = sha1($senhaTextoPuro);//SHA-1
+    $senhaCodifocadaComSHA256 = hash('sha256',$senhaTextoPuro);//SHA-256
+    ?>
+    <hr>
+
+    <p class="alert alert-warning"><i>Métodos/Algoritmos antigos (evite usar)</i></p>
+    <p>Senha (texto puro): <?=$senhaTextoPuro?></p>
+    <p>Senha (MD5): 
+        <?=$senhaCodifocadaComMDS5?> - (<?=strlen($senhaCodifocadaComMDS5)?>)</p>SENHA (MD5)
+
+        <p>Senha (-SHA1): 
+        <?=$senhaCodifocadaComSHA1?> - (<?=strlen($senhaCodifocadaComSHA1)?>)</p>SENHA (SHA-1)
+
+        <?=$senhaCodifocadaComSHA256?> - (<?=strlen($senhaCodifocadaComSHA256)?>)</p>SENHA (SHA-256)
+        <hr>
+
 
 
 
