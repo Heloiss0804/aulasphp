@@ -39,28 +39,28 @@
 
         <p><?= $fraseFeia ?></p>
         <p><?= $fraseBunitinha ?></p>
-       
+
 
         <h3><code>explode()</code></h3>
         <p>Transformar uma string em um array</p>
 
         <?php
         $textosLinguagens = "HTML,CSS,JS,PHP,SQL";
-        $arrayLinguagens = explode(",",$textosLinguagens);
+        $arrayLinguagens = explode(",", $textosLinguagens);
         ?>
-        <pre><?=var_dump($textosLinguagens)?></pre>
-        <pre><?=var_dump($arrayLinguagens)?></pre>
-<hr>
+        <pre><?= var_dump($textosLinguagens) ?></pre>
+        <pre><?= var_dump($arrayLinguagens) ?></pre>
+        <hr>
 
         <h3><code>implode()</code></h3>
         <p>Transforma array em string</p>
 
         <?php
-        $arrayBandas = ["Rush","Slayer", "Dio"];
-        $textoBandas = implode(" - ",$arrayBandas);
+        $arrayBandas = ["Rush", "Slayer", "Dio"];
+        $textoBandas = implode(" - ", $arrayBandas);
         ?>
-        <pre><?=var_dump($arrayBandas)?></pre>
-        <pre><?=var_dump($textoBandas)?></pre>
+        <pre><?= var_dump($arrayBandas) ?></pre>
+        <pre><?= var_dump($textoBandas) ?></pre>
 
         <hr>
 
@@ -78,14 +78,23 @@
         ?>
 
         <ul>
-            <li>ID: <?=$id?></li>
-            <li>Nome: <?=$nome?></li>
-            <li>Idade: <?=$idade?> anos</li>
+            <li>ID: <?= $id ?></li>
+            <li>Nome: <?= $nome ?></li>
+            <li>Idade: <?= $idade ?> anos</li>
         </ul>
+        <hr>
+            
+        <h3><code>array_sum()</code></h3>
+        <p>Somar valores de um array numérico</p>
 
-
-        
+        <?php
+        $valores = [10,20,50,1000,500];
+        $total = array_sum($valores);
+        ?>
        
+       <p>Soma dos valores do array <b><?=$total?></b></p>
+
+
 
 
     </div>
