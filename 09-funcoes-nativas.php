@@ -121,6 +121,20 @@
         <p>Maior valor: <?=max($valores)?></p>
         <p>Arredondamento: <?=round($valorQualquer)?></p>
 
+        <h2>Filtros</h2>
+        <p>Recursos/Funções/Constantes de análises e limpeza de dados aplicados através das funções <code>filter_var</code> e <code>filter_input</code></p>
+
+        <h3>Validação</h3>
+<?php
+//Exemplo de email estruturado erroneamente
+$emailErrado = "tiago.com.br";
+$emailCorreto = "thiago@provedor.com.br";
+?>
+     <p><?=var_dump(filter_var($emailErrado, FILTER_VALIDATE_EMAIL))?></p>
+     <p><?=var_dump(filter_var($emailCorreto, FILTER_VALIDATE_EMAIL))?></p>
+
+        <h3>Santização</h3>
+
 
 
     </div>
