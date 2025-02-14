@@ -10,7 +10,9 @@
 
 <body>
     <div class="container">
-        <h1>PHP</h1>
+        <h1>Processa usando GET</h1>
+        <hr>
+        <pre><?=var_dump($_GET)?></pre>
     </div>
 
 
