@@ -19,10 +19,15 @@
           </nav>
        </header>
        <main>
-        <h2>Bem - vindo ao site Exemplo</h2>
-        <p>Esta é a primeira página do nosso site.</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, eligendi, quaerat cum quam itaque ea ipsum non quas praesentium autem aliquam eaque nesciunt quidem laudantium adipisci aliquid officiis libero sit?
-        </p>
+        <h2>Página de cursos</h2>
+        <p>Veja os cursos disponível:</p>
+        <ul>
+          <li>Culinária</li>
+          <li>Direção Defenciva</li>
+          <li>Como escapar de um terremoto</li>
+        </ul>
+     
+        
        </main>
        <footer>
         <p>Site criado para o curso Téc. Informática para Internet</p>
