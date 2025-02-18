@@ -28,6 +28,7 @@
         $idade = $_POST["idade"];
         $mensagem = $_POST["mensagem"];
 
+
            
 
         //Capturando os options
@@ -40,7 +41,7 @@
 
         $interesses = $_POST["interesses"] ?? [];
 
-        $inf = $_POST["informativos"];
+        $inf = $_POST["informativos"] ?? [];
 
       
 
@@ -59,7 +60,10 @@
             <li>Nome: <?= $nome ?></li>
             <li>E-mail: <?= $email ?></li>
             <li>Idade: <?= $idade ?></li>
-            <li>Receber informativos: <?=$inf?></li>
+           
+            <?php if (!empty($informativos)){?>
+                <li>Receber informativos: <?=$inf?></li>
+            <?php } ?>
 
             <li>Messagem - usando <code>implode()</code>:
                 <!-- Tranformamos o arrays em string -->
