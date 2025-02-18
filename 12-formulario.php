@@ -13,26 +13,41 @@
         <h1>Formúlario</h1>
         <hr>
         <form action="processa-post.php" method="post">
-        <div class="mb-3">
-            <label for="nome" class="form-label">Nome:</label>
-            <input class="form-control" type="text" name="nome" id="nome">
-        </div>
-        <div class="mb-3">
-            <label for="email">E-mail:</label>
-            <input class="form-control" type="email" name="email" id="email">
-        </div>
-        <div class="mb-3">
-            <label for="idade">Idade:</label>
-            <input class="form-control" type="number" name="idade" id="idade" min="1" max="100">
-        </div>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome:</label>
+                <input class="form-control" type="text" name="nome" id="nome">
+            </div>
+            <div class="mb-3">
+                <label for="email">E-mail:</label>
+                <input class="form-control" type="email" name="email" id="email">
+            </div>
+            <div class="mb-3">
+                <label for="idade">Idade:</label>
+                <input class="form-control" type="number" name="idade" id="idade" min="1" max="100">
+            </div>
 
-        <div class="mb-3">
-            <label for="mensagem">Mensagem:</label>
+            <div class="mb-3">
+                <p>Interesses</p>
+                <input type="checkbox" name="interesses[]" id="html" value="HTML">
+                <label for="html">HTML</label>
 
-            <textarea class="form-control" name="mensagem" id="mensagem" cols="30" rows="6"></textarea>
-        </div>
-        <button class="btn btn-primary" type="submit">Enviar dados</button>
-    </form>
+
+                <input type="checkbox" name="interesses[]" id="css" value="CSS">
+                <label for="html">CSS</label>
+
+
+                <input type="checkbox" name="interesses[]" id="js">
+                <label for="html">JS</label>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="mensagem">Mensagem:</label>
+
+                <textarea class="form-control" name="mensagem" id="mensagem" cols="30" rows="6"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar dados</button>
+        </form>
 
     </div>
 
