@@ -18,6 +18,7 @@
         $email = $_POST["email"];
         $idade = $_POST["idade"];
         $mensagem = $_POST["mensagem"];
+        
 
         //Capturando os options
 
@@ -28,6 +29,8 @@
         //Se houver interesses,os armazene.Caso contrário, guarde array vazio.
         $interesses = $_POST["interesses"] ?? [];
 
+        $inf = $_POST["informativos"];
+
         ?>
 
         <!-- Exibindo -->
@@ -36,6 +39,7 @@
             <li>Nome: <?= $nome ?></li>
             <li>E-mail: <?= $email ?></li>
             <li>Idade: <?= $idade ?></li>
+            <li>Receber informativos: <?=$inf?></li>
 
             <li>Messagem - usando <code>implode()</code>:
                 <!-- Tranformamos o arrays em string -->

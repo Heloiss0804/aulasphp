@@ -32,7 +32,7 @@
                 <label for="html">HTML</label>
 
                 <input type="checkbox" name="interesses[]" id="css" value="CSS">
-                <label for="html">CSS</label>
+                <label for="css">CSS</label>
 
 
                 <input type="checkbox" name="interesses[]" id="js">
