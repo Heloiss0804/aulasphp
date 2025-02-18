@@ -31,7 +31,6 @@
                 <input type="checkbox" name="interesses[]" id="html" value="HTML">
                 <label for="html">HTML</label>
 
-
                 <input type="checkbox" name="interesses[]" id="css" value="CSS">
                 <label for="html">CSS</label>
 
@@ -39,6 +38,15 @@
                 <input type="checkbox" name="interesses[]" id="js">
                 <label for="html">JS</label>
             </div>
+
+            <div class="mb-3">
+                    <p>Deseja Receber informativos?</p>
+                    <input type="radio" name="informativos" id="sim" value="Sim">
+                    <label for="sim">Sim</label>
+
+                    <input type="radio" name="informativos" id="nao" value="nao">
+                    <label for="nao">Não</label>
+                </div>
 
 
             <div class="mb-3">
