@@ -10,7 +10,7 @@
 
 <body>
     <div class="container">
-        <h1>Formúlario</h1>
+        <h1>Formúlario básico</h1>
         <hr>
         <form action="processa-post.php" method="post">
             <div class="mb-3">
