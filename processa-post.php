@@ -38,7 +38,7 @@
             <li>Interesses - usando <code>foreach()</code>:
                 <ul>
                     <?php foreach ($interesses as $interesse) { ?>
-                        <li><? $interesses ?></li>
+                        <li><?=$interesse ?></li>
                     <?php
 
                     } ?>
