@@ -22,11 +22,11 @@
         //Capturando os options
 
         //Solução 1: aplicar um ternário checando se existe algum interesse
-       // $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
+        // $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
 
-       //Solução 2: usando o operador de coalecência nula ??
-       //Se houver interesses,os armazene.Caso contrário, guarde array vazio.
-       $interesses = $_POST["interesses"] ?? [];
+        //Solução 2: usando o operador de coalecência nula ??
+        //Se houver interesses,os armazene.Caso contrário, guarde array vazio.
+        $interesses = $_POST["interesses"] ?? [];
 
         ?>
 
@@ -41,17 +41,20 @@
                 <!-- Tranformamos o arrays em string -->
                 <?= implode(",", $interesses) ?>
             </li>
+            <!-- Usamos o empty com versão de logíca (operador ! de negação.)
+             Portanto, se NÃO ESTÁ vazio, mostre os interesses. -->
+            <?php if ( !empty($interesses)) { ?>
+                <li>Interesses - usando <code>foreach()</code>:
+                    <ul>
+                        <?php foreach ($interesses as $interesse) { ?>
+                            <li><?= $interesse ?></li>
+                        <?php
 
-            <li>Interesses - usando <code>foreach()</code>:
-                <ul>
-                    <?php foreach ($interesses as $interesse) { ?>
-                        <li><?=$interesse ?></li>
-                    <?php
+                        } ?>
+                    </ul>
 
-                    } ?>
-                </ul>
-
-            </li>
+                </li>
+            <?php } ?>
 
             <li>Messagem: <?= $mensagem ?></li>
         </ul>
