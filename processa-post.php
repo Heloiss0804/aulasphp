@@ -13,12 +13,22 @@
         <h1>Processa usando Post</h1>
         <hr>
         <?php
+          if (empty($_POST["nome"])|| empty ($_POST["email"])) {?>
+          <p>"Por favor, preencha os campos nome e e-mail"</p>
+
+          <?php }  else { 
+         
+            
+           
+
+
         //Capturando os dados transmitidos
         $nome = $_POST['nome'];
         $email = $_POST["email"];
         $idade = $_POST["idade"];
         $mensagem = $_POST["mensagem"];
-        
+
+           
 
         //Capturando os options
 
@@ -27,15 +37,25 @@
 
         //Solução 2: usando o operador de coalecência nula ??
         //Se houver interesses,os armazene.Caso contrário, guarde array vazio.
+
         $interesses = $_POST["interesses"] ?? [];
 
         $inf = $_POST["informativos"];
 
-        ?>
+      
 
-        <!-- Exibindo -->
+
+        ?>
+         
+         <!-- Exibindo -->
         <h2>Dados</h2>
         <ul>
+            
+
+
+     <li>Nome: <?= $nome ?></li>
+     <li>E-mail: <?= $email ?></li>
+
             <li>Nome: <?= $nome ?></li>
             <li>E-mail: <?= $email ?></li>
             <li>Idade: <?= $idade ?></li>
@@ -62,7 +82,7 @@
 
             <li>Messagem: <?= $mensagem ?></li>
         </ul>
-
+        <?php   } ?>
 
     </div>
 
