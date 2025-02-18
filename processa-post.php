@@ -20,7 +20,14 @@
         $mensagem = $_POST["mensagem"];
 
         //Capturando os options
-        $interesses = $_POST["interesses"];
+
+        //Solução 1: aplicar um ternário checando se existe algum interesse
+       // $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
+
+       //Solução 2: usando o operador de coalecência nula ??
+       //Se houver interesses,os armazene.Caso contrário, guarde array vazio.
+       $interesses = $_POST["interesses"] ?? [];
+
         ?>
 
         <!-- Exibindo -->
